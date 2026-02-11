@@ -1,0 +1,131 @@
+:root {
+  --bg: #faf9f7;
+  --text: #181818;
+  --muted: #5b5b5b;
+  --line: #d8d5cf;
+  --link: #1b4ea3;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Iowan Old Style", "Palatino Linotype", Palatino, "Times New Roman", serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.65;
+}
+
+.page {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 2.25rem 1.25rem 4rem;
+}
+
+.site-header {
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.74rem;
+  color: var(--muted);
+  margin: 0;
+}
+
+h1 {
+  font-size: clamp(2.1rem, 5vw, 3rem);
+  line-height: 1.1;
+  margin: 0.55rem 0 0.75rem;
+  font-weight: 500;
+}
+
+h2 {
+  font-size: 1.28rem;
+  font-weight: 500;
+  margin: 0 0 0.7rem;
+}
+
+h3 {
+  font-size: 1.05rem;
+  margin: 0 0 0.45rem;
+  font-weight: 600;
+}
+
+.intro {
+  max-width: 70ch;
+  margin-bottom: 0.85rem;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+  font-size: 0.95rem;
+}
+
+a {
+  color: var(--link);
+  text-decoration: underline;
+  text-underline-offset: 0.12em;
+}
+
+.section {
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.two-col {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.plain-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.plain-list li {
+  margin-bottom: 0.65rem;
+}
+
+.timeline span {
+  display: inline-block;
+  min-width: 3.6rem;
+  color: var(--muted);
+}
+
+.section-head {
+  margin-bottom: 0.8rem;
+}
+
+.note {
+  color: var(--muted);
+  margin: 0;
+}
+
+.report-list {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.report-item {
+  padding: 0.85rem 0.95rem;
+  border: 1px solid var(--line);
+  background: #ffffffb8;
+}
+
+.report-item p {
+  margin: 0 0 0.5rem;
+}
+
+.footer {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
