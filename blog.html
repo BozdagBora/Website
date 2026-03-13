@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic Travel Blog | Bora Bozdag</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600&family=Work+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <!-- External stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="layout">
+        <!-- Left Column (280px) -->
+        <aside class="sidebar">
+          <img src="./assets/IMG_9004_ss.png" alt="Bora Bozdag" class="avatar">
+            <h1>Bora Bozdag</h1>
+            <p class="title">
+                4th Year Physics Masters Student<br>
+                University of Oxford
+            </p>
+            <div class="contact-links">
+                <a href="mailto:bora.bozdag@oriel.ox.ac.uk">bora.bozdag@oriel.ox.ac.uk</a>
+                <a href="https://www.linkedin.com/in/borabozdag/" target="_blank">LinkedIn</a>
+                <a href="./cv/Bora_Bozdag_CV.pdf" target="_blank">Download CV</a>
+            </div>
+            <div class="sidebar-divider" aria-hidden="true"></div>
+            <p class="sidebar-nav-title">Navigation</p>
+            <nav class="sidebar-nav" aria-label="Sidebar navigation">
+                <a href="index.html">Main page</a>
+                <a href="blog.html">Academic Travel Blog</a>
+            </nav>
+        </aside>
+
+        <!-- Right Column (max 700px) -->
+        <main class="main-content">
+            <h2>Academic Travel Blog</h2>
+
+            <!-- Reused "Recent Updates" content from index.html -->
+            <ul class="news-list">
+                <li class="news-item">
+                    <strong>[March 2026]</strong> To be updated.
+                </li>
+            </ul>
+            <img src="./assets/burak.jpg" alt="Travel Blog" style="width: 100%; max-width: 600px; margin-bottom: 30px; border-radius: 8px;">
+
+            <!-- Footer -->
+            <footer>
+                <p>&copy; 2025 Bora Bozdag. All rights reserved.</p>
+            </footer>
+        </main>
+    </div>
+
+    <!-- PDF Modal (kept for consistency) -->
+    <div id="pdfModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modalTitle">Simulation Report</h3>
+                <button class="close-modal" onclick="closeModal()">&times;</button>
+            </div>
+            <iframe id="pdfViewer" class="pdf-viewer"></iframe>
+        </div>
+    </div>
+
+    <script>
+        function openPDF(title, pdfUrl) {
+            const modal = document.getElementById('pdfModal');
+            const modalTitle = document.getElementById('modalTitle');
+            const pdfViewer = document.getElementById('pdfViewer');
+            
+            modalTitle.textContent = title;
+            pdfViewer.src = pdfUrl;
+            
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('pdfModal');
+            const pdfViewer = document.getElementById('pdfViewer');
+            
+            modal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+            
+            // Clear PDF after closing for performance
+            setTimeout(() => {
+                pdfViewer.src = '';
+            }, 300);
+        }
+
+        // Close modal on escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeModal();
+            }
+        });
+
+        // Close modal on background click
+        document.getElementById('pdfModal').addEventListener('click', function(event) {
+            if (event.target === this) {
+                closeModal();
+            }
+        });
+    </script>
+</body>
+</html>

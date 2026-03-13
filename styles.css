@@ -1,0 +1,450 @@
+:root {
+    /* Dark-mode minimal palette: bright light text for better contrast and readability */
+    --bg: #1a2028;            /* slightly lighter dark grey (avoids blue tones) */
+    --primary-text: #f0f4f7;  /* bright light grey for readability */
+    --secondary-text: #c5d3db;/* brighter muted grey for secondary text */
+    --accent: #3b82f6;       /* vibrant, highly saturated blue for links */
+    --border: #2d3a47;       /* lighter border for visibility on new bg */
+    --link-hover: #2563eb;   /* slightly darker blue for hover */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    color: var(--primary-text);
+    background: var(--bg);
+    -webkit-font-smoothing: antialiased;
+}
+
+.layout {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 30px;
+    padding: 80px 40px 120px;
+    align-items: flex-start;
+}
+
+/* Left Column - Fixed Width and Sticky */
+.sidebar {
+    width: 380px;
+    flex-shrink: 0;
+    position: sticky;
+    top: 80px;
+    opacity: 0;
+    animation: fadeIn 0.8s ease forwards;
+}
+
+.avatar {
+    /* Square avatar with light grey border */
+    width: 350px;
+    height: 350px;
+    margin-bottom: 30px;
+    border: 2px solid var(--border);
+    display: block; /* avoid inline-gap and subpixel shifts */
+}
+
+h1 {
+    font-family: 'Crimson Pro', serif;
+    font-size: 2em;
+    font-weight: 600;
+    margin-bottom: 0.3em;
+    color: var(--primary-text);
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+}
+
+.title {
+    font-size: 0.95em;
+    color: var(--secondary-text);
+    margin-bottom: 1.5em;
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+.contact-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.contact-links a {
+    color: var(--accent);
+    text-decoration: none;
+    font-size: 0.9em;
+    transition: color 0.2s ease;
+    display: block;
+}
+
+.contact-links a:hover {
+    color: var(--link-hover);
+}
+
+/* Sidebar divider and nav links under the CV */
+.sidebar-divider {
+    height: 1px;
+    background: var(--border);
+    margin: 18px 0;
+    border-radius: 1px;
+}
+
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.sidebar-nav-title {
+    color: var(--secondary-text);
+    font-size: 1.2em;
+    margin: 6px 0 6px;
+    font-weight: 300;
+}
+
+.sidebar-nav a {
+    /* Match the Download CV / contact link styles for consistency */
+    color: var(--accent);
+    text-decoration: none;
+    font-size: 0.9em;
+    transition: color 0.2s ease;
+    display: block;
+}
+
+.sidebar-nav a:hover {
+    color: var(--link-hover);
+    text-decoration: underline;
+}
+
+/* Right Column - Fixed Width */
+.main-content {
+    max-width: 700px;
+    flex: 1;
+    opacity: 0;
+    animation: fadeIn 0.8s ease 0.3s forwards;
+}
+
+/* Typography */
+h2 {
+    font-family: inherit;
+    font-size: 1.6em;
+    font-weight: 600;
+    margin: 40px 0 20px;
+    color: #ff9500;
+    letter-spacing: 0;
+}
+
+h2:first-child {
+    margin-top: 0;
+}
+
+h3 {
+    font-family: inherit;
+    font-size: 1.2em;
+    font-weight: 600;
+    margin: 20px 0 12px;
+    color: var(--primary-text);
+}
+
+p {
+    margin-bottom: 1em;
+    font-size: 1em;
+    line-height: 1.6;
+}
+
+a {
+    color: var(--accent);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: var(--link-hover);
+}
+
+/* Bio Section */
+.bio {
+    margin-bottom: 40px;
+}
+
+.bio strong {
+    font-weight: 500;
+    color: var(--primary-text);
+}
+
+/* News/Updates Section */
+.news-list {
+    list-style: none;
+}
+
+.news-item {
+    margin-bottom: 24px;
+    line-height: 1.7;
+}
+
+.news-item strong {
+    font-weight: 500;
+    color: var(--primary-text);
+}
+
+/* Project Section */
+.project-item {
+    margin-bottom: 50px;
+}
+
+.project-item h3 {
+    margin: 0 0 8px 0;
+    font-size: 1.25em;
+}
+
+.project-meta {
+    color: var(--secondary-text);
+    font-size: 0.95em;
+    margin-bottom: 12px;
+    font-style: italic;
+}
+
+.project-description {
+    margin-bottom: 12px;
+    position: relative;
+    padding-left: 1.5em;
+}
+
+.project-description::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+}
+
+.project-description-list {
+    list-style: none;
+    margin: 8px 0;
+    padding: 0;
+}
+
+.project-description-list li {
+    margin-bottom: 4px;
+    position: relative;
+    padding-left: 1.3em;
+    font-size: 0.95em;
+    line-height: 1.4;
+}
+
+.project-description-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+}
+
+.report-link {
+    color: var(--accent);
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.2s ease;
+    font-weight: 400;
+}
+
+.report-link:hover {
+    color: var(--link-hover);
+    text-decoration: underline;
+}
+
+/* Simulation Reports Section */
+.simulation-list {
+    list-style: none;
+}
+
+.simulation-item {
+    margin-bottom: 28px;
+}
+
+.simulation-item h3 {
+    margin: 0 0 6px 0;
+    font-size: 1.15em;
+    font-weight: 500;
+}
+
+.simulation-item h3 .report-link {
+    font-size: 1em;
+    font-weight: 500;
+}
+
+.simulation-item p {
+    margin: 8px 0 0 0;
+    font-size: 0.98em;
+    color: var(--secondary-text);
+}
+
+/* PDF Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.modal.active {
+    display: flex;
+    opacity: 1;
+}
+
+.modal-content {
+    position: relative;
+    width: 90%;
+    height: 90%;
+    margin: auto;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    transform: scale(0.9);
+    transition: transform 0.3s ease;
+}
+
+.modal.active .modal-content {
+    transform: scale(1);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    background: var(--accent);
+    color: white;
+}
+
+.modal-header h3 {
+    margin: 0;
+    color: white;
+    font-size: 1.3em;
+}
+
+.close-modal {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2em;
+    cursor: pointer;
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.2s ease;
+}
+
+.close-modal:hover {
+    opacity: 0.7;
+}
+
+.pdf-viewer {
+    width: 100%;
+    height: calc(100% - 80px);
+    border: none;
+}
+
+/* Footer */
+footer {
+    margin-top: 80px;
+    padding-top: 40px;
+    border-top: 1px solid var(--border);
+    color: var(--secondary-text);
+    font-size: 0.9em;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    /* Reduce to opacity-only animation to avoid GPU compositing which can cause colour artefacts */
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .layout {
+        flex-direction: column;
+        gap: 40px;
+        padding: 60px 30px 80px;
+    }
+
+    .sidebar {
+        width: 100%;
+        position: relative;
+        top: 0;
+    }
+
+    .avatar {
+        /* Tablet / small-desktop: slightly smaller to fit the narrower sidebar */
+        width: 280px;
+        height: 280px;
+        border: 2px solid var(--border);
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    .contact-links {
+        margin-top: 20px;
+    }
+
+    .main-content {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .layout {
+        padding: 40px 24px 60px;
+        gap: 30px;
+    }
+
+    .sidebar {
+        width: 100%;
+        position: relative;
+        top: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .avatar {
+        /* Mobile: nearly full width, centered */
+        width: 85vw;
+        max-width: 340px;
+        height: auto;
+        aspect-ratio: 1 / 1;
+        border: 2px solid var(--border);
+    }
+
+    h1 {
+        font-size: 1.6em;
+    }
+
+    h2 {
+        font-size: 1.4em;
+        margin: 40px 0 20px;
+    }
+
+    .modal-content {
+        width: 95%;
+        height: 95%;
+    }
+}

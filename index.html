@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bora Bozdag | Physics & Quantum Innovation</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600&family=Work+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <!-- External stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="layout">
+        <!-- Left Column (280px) -->
+        <aside class="sidebar">
+          <img src="./assets/IMG_9004_ss.png" alt="Bora Bozdag" class="avatar">
+            <h1>Bora Bozdag</h1>
+            <p class="title">
+                4th Year Physics Masters Student<br>
+                University of Oxford
+            </p>
+            <div class="contact-links">
+                <a href="mailto:bora.bozdag@oriel.ox.ac.uk">bora.bozdag@oriel.ox.ac.uk</a>
+                <a href="https://www.linkedin.com/in/borabozdag/" target="_blank">LinkedIn</a>
+                <a href="./pdfs/Bora_Bozdag_CV.pdf" target="_blank">Download CV</a>
+            </div>
+            <!-- Divider and navigation -->
+            <div class="sidebar-divider" aria-hidden="true"></div>
+            <p class="sidebar-nav-title">Navigation</p>
+            <nav class="sidebar-nav" aria-label="Sidebar navigation">
+                <a href="index.html">Main page</a>
+                <a href="blog.html">Academic Travel Blog</a>
+            </nav>
+        </aside>
+
+        <!-- Right Column (max 700px) -->
+        <main class="main-content">
+            <!-- Bio -->
+            <section class="bio">
+                <p>
+                    I'm a 4th-year physics masters student at the University of Oxford with a deep passion for <strong>superconducting quantum computing hardware</strong>, <strong>RF/microwave engineering</strong>, and <strong>experimental quantum-limited devices</strong>.
+                </p>
+                <p>
+                    My interest lies in utilising the theory behind <strong>circuit quantum elecrodynamics (cQED)</strong> and <strong>condensed matter physics</strong> with <strong>nanofacbrication</strong> to create experimentally innovative outcomes. I focus on taking scalable appoaches quantum computing hardware design with practical links that can revolutionise industrial applications.
+                </p>
+            </section>
+
+            <!-- Recent Updates moved to blog.html -->
+
+            <!-- Key Projects -->
+            <h2>Key Projects</h2>
+
+            <div class="project-item">
+                <h3>MPhys Masters Project</h3>
+                <p class="project-meta">University of Oxford | October 2025 - March 2026</p>
+                <ul class="project-description-list">
+                    <li>SIS receiver sensitivity calibration for dark matter detection experiment</li>
+                    <li>Extraction of noise temperature and impedance matching characteristics of superconducting tunnel junctions</li>
+                    <li>Hands-on experience in working with cryogenic systems</li>
+                    <li>Python-based simulation of the SIS junction and quasiparticle tunnelling curves</li>
+                </ul>
+                <p style="color: var(--secondary-text); font-size: 0.95em;">Project report to be released during summer 2026</p>
+            </div>
+
+            <div class="project-item">
+                <h3>Harvard Summer Internship</h3>
+                <p class="project-meta">Harvard University, Beth Israel Deaconess Medical Center | July-September 2025</p>
+                <ul class="project-description-list">
+                    <li>Novel pulse sequence development for Cardiac MRI</li>
+                    <li>Enabling intrinsic darkblood imaging</li>
+                    <li>Python-based Bloch equation simulation of pulse sequences</li>
+                    <li>Pulse sequence theory and analysis</li>
+                    <li>Clinical testing with commercial and research MRI instrumentation</li>
+                </ul>
+                <p style="color: var(--secondary-text); font-size: 0.95em;">Publication: ISMRM 2026 Conference (forthcoming)</p>
+            </div>
+
+            <div class="project-item">
+                <h3>Third Year Project</h3>
+                <p class="project-meta">University of Oxford | November 2024</p>
+                <ul class="project-description-list">
+                    <li>Remote Temperature Sensing via Radiometry</li>
+                    <li>Automated radiometer system using LabVIEW for multi-layer temperature measurements</li>
+                    <li>Employed spectral filters to characterise the temperature composition of multi-layer objects</li>
+                    <li>Determined temperature at each layer through blackbody radiation modeling and spectral radiance analysis</li>
+                </ul>
+                <p>
+                    <a href="#" class="report-link" onclick="openPDF('Third Year Project Report', './pdfs/Third_Year_Project_Report.pdf'); return false;">View Full Report</a>
+                </p>
+            </div>
+
+            <div class="project-item">
+                <h3>Oxford & Diamond Light Source Summer Internship</h3>
+                <p class="project-meta">University of Oxford & Diamond Light Source | July-August 2024</p>
+                <ul class="project-description-list">
+                    <li>Developed a vector network analyzer - ferromagnetic resonance (VNA-FMR) system for the Magnetic Spectroscopy Group</li>
+                    <li>Grew thin-film quantum materials and learned about spintronics device development</li>
+                    <li>Gained hands-on experience with material characterisation techniques (XRR, XRD, AFM, SEM...)</li>
+                    <li>Shadowed during 2 beamtimes at the Diamond Light Source</li>
+                </ul>
+                <p>
+                    <a href="#" class="report-link" onclick="openPDF('VNA-FMR Systems Report', './pdfs/2024_Summer_Internship_Report.pdf'); return false;">View Full Report</a>
+                </p>
+            </div>
+
+            <!-- Simulation Reports -->
+            <h2>Simulation Reports</h2>
+
+            <div class="simulation-item">
+                <h3>
+                    <a href="#" class="report-link" onclick="openPDF('Report', './pdfs/report.pdf'); return false;">Simulation Report to be updated</a>
+                </h3>
+                <p>Simulations will be added soon</p>
+            </div>
+
+
+            <!-- Leadership & Service -->
+            <h2>Leadership & Service</h2>
+
+            <div class="project-item">
+                <h3>President, Oxford University Kickboxing Club</h3>
+                <p class="project-meta">University of Oxford | October 2023 - August 2024</p>
+                <p class="project-description">
+                    Led and managed the university kickboxing club, organizing the annual varsity match with Cambridge (40+ guests), managing administrative tasks, and developing leadership and team management skills.
+                </p>
+            </div>
+
+            <!-- Footer -->
+            <footer>
+                <p>&copy; 2026 Bora Bozdag. All rights reserved.</p>
+            </footer>
+        </main>
+    </div>
+
+    <!-- PDF Modal -->
+    <div id="pdfModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modalTitle">Simulation Report</h3>
+                <button class="close-modal" onclick="closeModal()">&times;</button>
+            </div>
+            <iframe id="pdfViewer" class="pdf-viewer"></iframe>
+        </div>
+    </div>
+
+    <script>
+        function openPDF(title, pdfUrl) {
+            const modal = document.getElementById('pdfModal');
+            const modalTitle = document.getElementById('modalTitle');
+            const pdfViewer = document.getElementById('pdfViewer');
+            
+            modalTitle.textContent = title;
+            pdfViewer.src = pdfUrl;
+            
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('pdfModal');
+            const pdfViewer = document.getElementById('pdfViewer');
+            
+            modal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+            
+            // Clear PDF after closing for performance
+            setTimeout(() => {
+                pdfViewer.src = '';
+            }, 300);
+        }
+
+        // Close modal on escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeModal();
+            }
+        });
+
+        // Close modal on background click
+        document.getElementById('pdfModal').addEventListener('click', function(event) {
+            if (event.target === this) {
+                closeModal();
+            }
+        });
+    </script>
+</body>
+</html>
